@@ -9,35 +9,82 @@ class Program
 {
     public static void Main(string[] args)
     {
-        // This program calculates the pizza cost
-        int large;
-        int extraLarge;
-        int oneTopping;
-        int twoTopping;
-        int threeTopping;
-        int fourTopping;
-        var pizzaSize = 0;
-        var pizzaTopping = 0;
+        const double TAX_RATE = 1.13;
+        string sizeChoice;
+        double toppingChoice;
+        double sizePrice;
+        double toppingPrice;
+        double totalCost;
+
+        Console.WriteLine("Welcome to Kenny's Pizzeria!");
+        Console.WriteLine("");
         
-        // input
-        Console.WriteLine("This calculates the price of your pizza order");
+        void pizzaSize()
+        {
+            Console.WriteLine("Enter the size of pizza you would like (use the abbreviation):");
+            Console.WriteLine("");
+            Console.WriteLine("Large (L) - $6.00");
+            Console.WriteLine("Extra Large (XL) - $10.00");
+            sizeChoice = Console.ReadLine();
+            
+            if (sizeChoice == "L")
+            {
+                sizePrice = 6.00;
+            }
+            else if (sizeChoice == "XL")
+            {
+                sizePrice = 10.00;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Please choose a valid size of pizza.");
+                pizzaSize();
+            }
+        };
+        
+        void pizzaToppings()
+        {    
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Enter the amount of toppings you would like:");
+            Console.WriteLine("One Topping (1) - $1.00");
+            Console.WriteLine("Two Toppings (2) - $1.75");
+            Console.WriteLine("Three Toppings (3) - $2.50");
+            Console.WriteLine("Four Toppings (4) - $3.35");
+            toppingChoice = Convert.ToDouble(Console.ReadLine());
+            if (toppingChoice == 1)
+            {
+                toppingPrice = 1.00;
+            }
+            else if (toppingChoice == 2)
+            {
+                toppingPrice = 1.75;
+            }
+            else if (toppingChoice == 3)
+            {
+                toppingPrice = 2.50;
+            }
+            else if (toppingChoice == 4)
+            {
+                toppingPrice = 3.35;
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Please choose a valid amount of toppings.");
+                pizzaToppings();
+            }
+        };
+        
+        pizzaSize();
+        pizzaToppings();
 
         Console.WriteLine("");
-        Console.Write("Pick a pizza size ");
-        if (large )
-
-        // process and output
-        Console.WriteLine("");
-        if (guess == generatedNumber)
-        {
-            Console.WriteLine("You are correct!");
-        }
-
-        if (guess != generatedNumber)
-        {
-            Console.WriteLine("You are incorrect!");
-        }
-
+        totalCost = (sizePrice + toppingPrice) * TAX_RATE;
+        
+        Console.WriteLine("The cost of a " + sizeChoice + "arge" + " " + toppingChoice + " topping" + " pizza is $" + totalCost.ToString("0.00") + ".");
+        
         Console.WriteLine("\nDone.");
     }
 }
