@@ -17,11 +17,12 @@ class Program
         double totalCost;
 
         Console.WriteLine("Welcome to Kenny's Pizzeria!");
+        Console.WriteLine("Today we will be calculating your pizza order");
         Console.WriteLine("");
 
         void pizzaSize()
         {
-            Console.WriteLine("Enter the size of pizza you would like (use the abbreviation):");
+            Console.WriteLine("Please enter the size of pizza you would like (use the abbreviation):");
             Console.WriteLine("");
             Console.WriteLine("Large (L) - $6.00");
             Console.WriteLine("Extra Large (XL) - $10.00");
@@ -47,7 +48,7 @@ class Program
         {
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("Enter the amount of toppings you would like:");
+            Console.WriteLine("Please enter the amount of toppings you would like:");
             Console.WriteLine("One Topping (1) - $1.00");
             Console.WriteLine("Two Toppings (2) - $1.75");
             Console.WriteLine("Three Toppings (3) - $2.50");
