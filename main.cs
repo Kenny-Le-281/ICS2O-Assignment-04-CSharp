@@ -18,7 +18,7 @@ class Program
 
         Console.WriteLine("Welcome to Kenny's Pizzeria!");
         Console.WriteLine("");
-        
+
         void pizzaSize()
         {
             Console.WriteLine("Enter the size of pizza you would like (use the abbreviation):");
@@ -26,7 +26,7 @@ class Program
             Console.WriteLine("Large (L) - $6.00");
             Console.WriteLine("Extra Large (XL) - $10.00");
             sizeChoice = Console.ReadLine();
-            
+
             if (sizeChoice == "L")
             {
                 sizePrice = 6.00;
@@ -42,9 +42,9 @@ class Program
                 pizzaSize();
             }
         }
-        
+
         void pizzaToppings()
-        {    
+        {
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("Enter the amount of toppings you would like:");
@@ -75,16 +75,16 @@ class Program
                 Console.WriteLine("Please choose a valid amount of toppings.");
                 pizzaToppings();
             }
-        };
-        
+        }
+
         pizzaSize();
         pizzaToppings();
 
         Console.WriteLine("");
         totalCost = (sizePrice + toppingPrice) * TAX_RATE;
-        
+
         Console.WriteLine("The cost of a " + sizeChoice + "arge" + " " + toppingChoice + " topping" + " pizza is $" + totalCost.ToString("0.00") + ".");
-        
+
         Console.WriteLine("\nDone.");
     }
 }
