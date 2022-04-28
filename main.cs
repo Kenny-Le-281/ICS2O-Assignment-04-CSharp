@@ -49,6 +49,7 @@ class Program
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("Please enter the amount of toppings you would like:");
+            Console.WriteLine("");
             Console.WriteLine("One Topping (1) - $1.00");
             Console.WriteLine("Two Toppings (2) - $1.75");
             Console.WriteLine("Three Toppings (3) - $2.50");
