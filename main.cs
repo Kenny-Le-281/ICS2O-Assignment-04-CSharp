@@ -41,7 +41,7 @@ class Program
                 Console.WriteLine("Please choose a valid size of pizza.");
                 pizzaSize();
             }
-        };
+        }
         
         void pizzaToppings()
         {    
