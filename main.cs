@@ -9,6 +9,7 @@ class Program
 {
     public static void Main(string[] args)
     {
+        // This function calculates the pizza cost
         const double TAX_RATE = 1.13;
         string sizeChoice;
         double toppingChoice;
@@ -16,6 +17,7 @@ class Program
         double toppingPrice;
         double totalCost;
 
+        // input
         Console.WriteLine("Welcome to Kenny's Pizzeria!");
         Console.WriteLine("Today we will be calculating your pizza order");
         Console.WriteLine("");
@@ -79,12 +81,14 @@ class Program
             }
         }
 
+        // process
         pizzaSize();
         pizzaToppings();
 
         Console.WriteLine("");
         totalCost = (sizePrice + toppingPrice) * TAX_RATE;
 
+        // output
         Console.WriteLine("The cost of a " + sizeChoice + "arge" + " " + toppingChoice + " topping" + " pizza is $" + totalCost.ToString("0.00") + ".");
 
         Console.WriteLine("\nDone.");
