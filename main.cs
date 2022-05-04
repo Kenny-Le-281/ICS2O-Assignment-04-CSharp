@@ -50,7 +50,7 @@ class Program
         Console.WriteLine("Three Toppings (3) - $2.50");
         Console.WriteLine("Four Toppings (4) - $3.35");
         toppingChoice = Convert.ToDouble(Console.ReadLine());
-        
+
         if (toppingChoice == 1)
         {
             toppingPrice = 1.00;
@@ -76,7 +76,7 @@ class Program
         // process
         Console.WriteLine("");
         totalCost = (sizePrice + toppingPrice) * TAX_RATE;
-        
+
         // output
         Console.WriteLine("The cost of a " + sizeChoice + "arge" + " " + toppingChoice + " topping" + " pizza is $" + totalCost.ToString("0.00") + ".");
 
